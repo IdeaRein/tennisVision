@@ -23,3 +23,4 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+# 動画のリソースを解放し、ウィンドウを閉じる
