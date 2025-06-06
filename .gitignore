@@ -1,3 +1,4 @@
+# 仮想環境とIDE設定
 tennisVision-env/
 __pycache__/
 *.pyc
@@ -8,3 +9,16 @@ env/
 venv/
 .idea/
 .vscode/
+
+# 学習済みモデル・重いファイル（GitHub制限対策）
+*.pt
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# YOLO関連生成物
+runs/
+labels/*.txt
+labels/cached/
+datasets/**/labels/
