@@ -1,9 +1,10 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("Models/yolov8x.pt")  # 精度の良いモデルを指定
+# model = YOLO("Models/yolov8x.pt")  # 精度の良いモデルを指定
+model = YOLO("LeaeningModels/best.pt")  # 精度の良いモデルを指定
 
-video_path = "Datas/tennis_sample2.mp4"
+video_path = "Datas/tennis_sample.mp4"
 cap = cv2.VideoCapture(video_path)
 
 while cap.isOpened():
