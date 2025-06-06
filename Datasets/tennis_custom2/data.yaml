@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['objects', 'tennisBall']
+
+roboflow:
+  workspace: tennis-ball-detection-nlans
+  project: my-first-project-uvdn1
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tennis-ball-detection-nlans/my-first-project-uvdn1/dataset/2
