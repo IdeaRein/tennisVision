@@ -1,10 +1,11 @@
 from ultralytics import YOLO
 import cv2
 
-# model = YOLO("Models/yolov8x.pt")  # 精度の良いモデルを指定
+# model = YOLO("Models/yolov8m.pt")  # 精度の良いモデルを指定
 model = YOLO("LeaeningModels/best.pt")  # 精度の良いモデルを指定
 
-video_path = "Datas/tennis_sample.mp4"
+# video_path = "Datas/tennis_sample2.mp4"
+video_path = "Datas/sample.mov"
 cap = cv2.VideoCapture(video_path)
 
 while cap.isOpened():
@@ -12,7 +13,7 @@ while cap.isOpened():
     if not ret:
         break
 
-    # conf=0.2で、人間(0)とテニスボール(32)のみ検出
+    # conf=0.3で、人間(0)とテニスボール(32)のみ検出
     results = model.predict(frame, conf=0.3, classes=[0, 32])
 
     annotated_frame = results[0].plot()
